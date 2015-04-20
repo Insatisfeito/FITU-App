@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.3" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="FITU_Bracara_Avgvsta/Vote.cs" Line="9" Column="3" />
+      <File FileName="FITU_Bracara_Avgvsta/TUM.cs" Line="17" Column="55" />
+      <File FileName="FITU_Bracara_Avgvsta/FITU.cs" Line="18" Column="55" />
+      <File FileName="FITU_Bracara_Avgvsta/Agenda.cs" Line="27" Column="55" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

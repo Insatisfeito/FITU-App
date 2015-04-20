@@ -1,0 +1,9 @@
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/LaunchScreen.nib
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/actool/partial-info.plist
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/actool/asset-manifest.plist
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/bin/iPhoneSimulator/Release/FITU_Bracara_Avgvsta.exe.mdb
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/bin/iPhoneSimulator/Release/FITU_Bracara_Avgvsta.exe
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/FITU_Bracara_Avgvsta.exe
+/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/FITU_Bracara_Avgvsta.exe.mdb

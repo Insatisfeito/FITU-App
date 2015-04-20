@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>XXV FITU</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $.getJSON("http://www.tum.pt/?json=get_recent_posts&callback=?", function(data) {
+            for (var i = 0; i < data.posts.length; i++) {
+                $(".news").append("<h3>" + data.posts[i].title + "</h3>");
+
+                $(".news").append(data.posts[i].content);
+                $(".news").append(data.posts[i].date);
+                $(".news").append("<hr>");
+            }
+        });
+    });
+    </script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <style>
+    h4 {
+        padding: 20px;
+        background: #ee2105;
+        color: #FFF;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -30px;
+    }
+
+    body {
+        background-image: url(images/bg.jpg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="margin-bottom:40px;">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 25%">
+                <h4>Notícias</h4>
+                <div class="news"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

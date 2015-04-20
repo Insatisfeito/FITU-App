@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>XXV FITU</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+         $.getJSON("http://www.tum.pt/tunas-participantes/?json=get_recent_posts&callback=?", function(tunas) {
+            $( ".tunas" ).append( tunas.posts[0].content );
+
+        });
+
+        $.getJSON("http://www.tum.pt/api/get_page/?id=1576&callback=?", function(eventos) {
+            $( ".agenda" ).append( eventos.page.title );
+            $( ".agenda" ).append( eventos.page.content );
+            $( ".agenda" ).append( eventos.page.date );
+        });
+    });
+    </script>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <style>
+    h4 {
+        padding: 20px;
+        background: #ee2105;
+        color: #FFF;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -30px;
+    }
+
+    body {
+        background-image: url(images/bg.jpg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container" style="margin-bottom:40px;">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 25%">
+                <h4>XXV FITU Bracara Avgvsta</h4>
+                <img src="images/2208.png" class="img-responsive">
+                <div class="agenda"></div>
+                <hr/>
+                <div class="tunas"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

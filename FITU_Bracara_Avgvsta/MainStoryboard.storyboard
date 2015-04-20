@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4443" systemVersion="13A451" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="6">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="7" sceneMemberID="viewController" customClass="TabBarController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="12">
+                        <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue id="68" destination="28" kind="relationship" relationship="viewControllers"/>
+                        <segue id="89" destination="35" kind="relationship" relationship="viewControllers"/>
+                        <segue id="113" destination="42" kind="relationship" relationship="viewControllers"/>
+                        <segue id="340" destination="318" kind="relationship" relationship="viewControllers"/>
+                        <segue id="360" destination="345" kind="relationship" relationship="viewControllers"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="144"/>
+        </scene>
+        <scene sceneID="27">
+            <objects>
+                <viewController id="28" sceneMemberID="viewController" customClass="Agenda">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="25"/>
+                        <viewControllerLayoutGuide type="bottom" id="26"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="29">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notícias" id="67" image="agenda.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-127"/>
+        </scene>
+        <scene sceneID="34">
+            <objects>
+                <viewController id="35" sceneMemberID="viewController" customClass="TUM">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="32"/>
+                        <viewControllerLayoutGuide type="bottom" id="33"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="36">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TUM" id="88" image="tum.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="-126"/>
+        </scene>
+        <scene sceneID="41">
+            <objects>
+                <viewController id="42" sceneMemberID="viewController" customClass="FITU">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="39"/>
+                        <viewControllerLayoutGuide type="bottom" id="40"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="43">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="XXV FITU" id="112" image="fitu.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="492"/>
+        </scene>
+        <scene sceneID="317">
+            <objects>
+                <viewController id="318" sceneMemberID="viewController" customClass="Historial">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="315"/>
+                        <viewControllerLayoutGuide type="bottom" id="316"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="319">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Historial" id="339" image="historial.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="320" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="834"/>
+        </scene>
+        <scene sceneID="344">
+            <objects>
+                <viewController id="345" sceneMemberID="viewController" customClass="Vote">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="342"/>
+                        <viewControllerLayoutGuide type="bottom" id="343"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="346">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Votações" id="359" image="vote.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="347" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="547"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="agenda.png" width="30" height="30"/>
+        <image name="fitu.png" width="30" height="30"/>
+        <image name="tum.png" width="30" height="30"/>
+        <image name="vote.png" width="30" height="30"/>
+        <image name="xxv.png" width="910" height="595"/>
+        <image name="tum_logo.png" width="727" height="727"/>
+        <image name="fitu_launch.png" width="1242" height="906"/>
+        <image name="historial.png" width="30" height="30"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
+    </resources>
+</document>
