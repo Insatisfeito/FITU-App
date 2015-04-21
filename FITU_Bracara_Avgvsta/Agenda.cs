@@ -26,7 +26,7 @@ namespace FITU_Bracara_Avgvsta
 			webView = new UIWebView (View.Bounds);
 			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
 			View.AddSubview(webView);
-			string url = "file:///Users/daniel/Downloads/tum/noticias.html";
+			string url = "http://ios.tum.pt/noticias.html";
 			webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 			webView.ScalesPageToFit = true;
 

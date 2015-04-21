@@ -99,9 +99,16 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage-1.launchimage\Default-568h%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage-1.launchimage\960.png" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage-1.launchimage\640.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\app180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\app120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\app29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\app57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\app87.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\app114.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\app58.png" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
     <InterfaceDefinition Include="Launchscreen.storyboard" />
   </ItemGroup>
@@ -153,5 +160,9 @@
     <BundleResource Include="Resources\tum%402x.png" />
     <BundleResource Include="Resources\fitu.png" />
     <BundleResource Include="Resources\fitu%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
 </Project>

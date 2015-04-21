@@ -11,6 +11,7 @@
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
+
     <style>
     h4 {
         padding: 20px;
@@ -21,13 +22,21 @@
         margin-left: -30px;
     }
 
-    body {
-        background-image: url(images/bg.jpg);
-        background-position: right bottom;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
+
     </style>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+         $.getJSON("http://www.tum.pt/historial/?json=get_recent_posts&callback=?", function(historia) {
+            $( ".historia" ).append( historia.posts[0].content );
+
+        });
+
+
+    });
+    </script>
+
 </head>
 
 <body>
@@ -36,7 +45,7 @@
             <div class="one-half column" style="margin-top: 25%">
                 <h4>Tuna Universitária do Minho</h4>
                 <img class="img-responsive logo" src="images/tum_logo.png">
-                <p style="margin-bottom:60px;margin-top:30px;">A Tuna Universitária do Minho foi fundada no ano de mil novecentos e noventa por vinte jovens trovadores na mui nobre e augusta Cidade de Braga com objectivo de cantar e encantar as belas discípulas de Vénus, bem como manter as velhas e irreverentes tradições académicas. Reconhecidos como alegres, joviais, andarilhos, comedores, bebedores e namoradores desde a nossa estreia nas Monumentais Festas do Enterro da Gata de mil novecentos e noventa, temos sido com grande orgulho a grande Embaixatriz Académica da Universidade do Minho, levando a alegria e deixando a saudade por todas as terras e locais por onde já passámos. A Tuna Universitária do Minho enverga o trajo académico da Universidade do Minho, com pequenas alterações aprovadas pela praxe da academia minhota. Adoptou o uso de meias vermelhas, cor da Universidade do Minho, assim como um «bico» da mesma cor sobre os ombros, que já nos valeram a alcunha de «vermelhinhos», conferindo à Tuna uma identidade muito própria. Em homenagem às raízes da Academia Bracarense, a TUM com a colaboração do maestro Armindo Maia, antigo regente da Tuna do Liceu nacional Sá de Miranda, resgatou alguns dos hinos dessa tuna, alguns dos quais se tornariam também em nossos hinos.
+                <p style="margin-bottom:60px;margin-top:30px;" class="historia">
                 </p>
             </div>
         </div>
