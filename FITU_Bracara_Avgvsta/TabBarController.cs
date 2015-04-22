@@ -11,8 +11,6 @@ namespace FITU_Bracara_Avgvsta
 		{
 			TabBar.BarTintColor = UIColor.White;
 			TabBar.TintColor = UIColor.Red;
-
-
 		}
 
 		public override void DidReceiveMemoryWarning ()
