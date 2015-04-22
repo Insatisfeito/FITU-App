@@ -1,4 +1,0 @@
-2015-04-21 12:56:37.282 FITU_Bracara_Avgvsta[1794:54018] Communications error: <OS_xpc_error: <error: 0x7c895f4> { count = 1, contents =
-	"XPCErrorDescription" => <string: 0x7c8983c> { length = 22, contents = "Connection interrupted" }
-}>
-2015-04-21 12:56:37.292 FITU_Bracara_Avgvsta[1794:54286] Terminating since there is no system app.

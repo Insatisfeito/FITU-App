@@ -1,10 +1,5 @@
 using System;
-using System.Drawing;
-using System.Net;
-using System.IO;
-using System.CodeDom;
-using Mono;
-using System.Linq;
+using CoreGraphics;
 
 
 
@@ -16,7 +11,7 @@ namespace FITU_Bracara_Avgvsta
 {
 	public partial class Historial : UIViewController
 	{
-		UIWebView webView;
+		UIWebView webView; int executed = 0;
 
 		public Historial (IntPtr handle) : base (handle)
 		{
@@ -51,13 +46,31 @@ namespace FITU_Bracara_Avgvsta
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			webView.ShouldStartLoad = HandleShouldStartLoad;
 
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
 		public override void ViewWillAppear (bool animated)
 		{
-			base.ViewWillAppear (animated);
+			if (executed == 0) {
+				executed = 1;
+				base.ViewWillAppear (animated);
+				int SystemVersion = Convert.ToInt16 (UIDevice.CurrentDevice.SystemVersion.Split ('.') [0].ToString ());
+				if (SystemVersion >= 7) {
+					this.EdgesForExtendedLayout = UIRectEdge.None;
+					this.AutomaticallyAdjustsScrollViewInsets = false;
+					this.ExtendedLayoutIncludesOpaqueBars = false;
+
+					CGRect tempRect;
+
+					foreach (UIView sub in this.View.Subviews) {
+						tempRect = sub.Frame;
+						tempRect.Y += 20.0f;
+						sub.Frame = tempRect;
+					}
+				}
+			}
 		}
 
 		public override void ViewDidAppear (bool animated)
@@ -75,6 +88,20 @@ namespace FITU_Bracara_Avgvsta
 			base.ViewDidDisappear (animated);
 		}
 
+
+		bool HandleShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType)
+		{
+			// Filter out clicked links
+			if(navigationType == UIWebViewNavigationType.LinkClicked) {
+				if(UIApplication.SharedApplication.CanOpenUrl(request.Url)) {
+					// Open in Safari instead
+					UIApplication.SharedApplication.OpenUrl(request.Url);
+					return false;
+				}
+			}
+
+			return true;
+		}
 		#endregion
 	}
 }

@@ -34,5 +34,26 @@
 	<string>Resources/Images.xcassets/LaunchImage-1.launchimage</string>
 	<key>CFBundleDisplayName</key>
 	<string>XXV FITU</string>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackTranslucent</string>
+	<key>UIStatusBarTintParameters</key>
+	<dict>
+		<key>UINavigationBar</key>
+		<dict>
+			<key>Style</key>
+			<string>UIBarStyleDefault</string>
+			<key>Translucent</key>
+			<false/>
+			<key>TintColor</key>
+			<dict>
+				<key>Red</key>
+				<real>1</real>
+				<key>Green</key>
+				<real>0</real>
+				<key>Blue</key>
+				<real>0.262195773250935</real>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

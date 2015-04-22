@@ -1,5 +1,4 @@
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
-/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/LaunchScreen.nib
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/MainStoryboard.storyboardc/28-view-29.nib
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/MainStoryboard.storyboardc/318-view-319.nib
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/MainStoryboard.storyboardc/345-view-346.nib
@@ -7,7 +6,6 @@
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/MainStoryboard.storyboardc/42-view-43.nib
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/MainStoryboard.storyboardc/Info.plist
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/MainStoryboard.storyboardc/UIViewController-7.nib
-/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/ibtool/Launchscreen.storyboardc
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/actool/partial-info.plist
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/actool/asset-manifest.plist
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Release/actool/AppIcons29x29.png

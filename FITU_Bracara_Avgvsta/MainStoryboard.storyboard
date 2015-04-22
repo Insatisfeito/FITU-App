@@ -12,6 +12,8 @@
                         <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                        <color key="selectedImageTintColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
                     </tabBar>
                     <connections>
                         <segue id="68" destination="28" kind="relationship" relationship="viewControllers"/>

@@ -6,9 +6,6 @@
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/42-view-43.nib
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/Info.plist
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/UIViewController-7.nib
-/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/ibtool/Launchscreen.storyboardc/7-view-8.nib
-/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/ibtool/Launchscreen.storyboardc/Info.plist
-/Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/ibtool/Launchscreen.storyboardc/UIViewController-7.nib
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/actool/partial-info.plist
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
 /Users/daniel/Projects/FITU_Bracara_Avgvsta/FITU_Bracara_Avgvsta/obj/iPhoneSimulator/Debug/actool/AppIcons29x29.png

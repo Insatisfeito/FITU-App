@@ -110,7 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
-    <InterfaceDefinition Include="Launchscreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
