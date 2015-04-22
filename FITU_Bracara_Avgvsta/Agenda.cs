@@ -1,11 +1,9 @@
 using System;
-using CoreGraphics;
-
-
-
-
-using Foundation;
 using UIKit;
+using CoreGraphics;
+using MonoTouch;
+using Foundation;
+
 
 namespace FITU_Bracara_Avgvsta
 {
@@ -16,7 +14,12 @@ namespace FITU_Bracara_Avgvsta
 		public Agenda (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("Notícias", "Notícias");
-			TabBarItem.Image = UIImage.FromFile ("agenda");
+			var attrs = new UITextAttributes () {
+				TextColor = UIColor.FromRGB(168,0,0),
+			};
+			UITabBarItem.Appearance.SetTitleTextAttributes (attrs, state: UIControlState.Normal);
+
+
 			View.BackgroundColor = UIColor.White;
 			webView = new UIWebView (View.Bounds);
 
@@ -25,12 +28,7 @@ namespace FITU_Bracara_Avgvsta
 			string url = "http://ios.tum.pt/noticias.html";
 			webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 			webView.ScalesPageToFit = true;
-
-
-
-			 
-
-
+		
 
 		}
 

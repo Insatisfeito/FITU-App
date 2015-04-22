@@ -16,7 +16,6 @@ namespace FITU_Bracara_Avgvsta
 		public Historial (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("Historial", "Historial");
-			TabBarItem.Image = UIImage.FromFile ("historial");
 			View.BackgroundColor = UIColor.White;
 			webView = new UIWebView (View.Bounds);
 			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
