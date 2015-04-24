@@ -17,8 +17,22 @@ namespace FITU_Bracara_Avgvsta
 
 			View.AddSubview(webView);
 			string url = "http://poll.fitu.tum.pt";
-			webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+
 			webView.ScalesPageToFit = false;
+
+
+
+			if(!Reachability.IsHostReachable("tum.pt")) {
+				UIAlertView alert = new UIAlertView ();
+				alert.Title = "Sem ligação à rede";
+				alert.AddButton ("Continuar");
+				alert.Message = "Não conseguirá usar a aplicação sem conexão à rede.";
+				alert.Show ();
+			}
+			else
+			{
+				webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+			}
 		}
 
 		public override void DidReceiveMemoryWarning ()
