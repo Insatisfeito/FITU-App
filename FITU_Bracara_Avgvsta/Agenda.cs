@@ -9,7 +9,9 @@ namespace FITU_Bracara_Avgvsta
 {
 	public partial class Agenda : UIViewController
 	{
-		UIWebView webView; int executed = 0;
+		UIWebView webView; 
+		int executed = 0; 
+		string url = "http://ios.tum.pt/noticias.html";
 
 		public Agenda (IntPtr handle) : base (handle)
 		{
@@ -26,11 +28,12 @@ namespace FITU_Bracara_Avgvsta
 
 			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
 			View.AddSubview(webView);
-			string url = "http://ios.tum.pt/noticias.html";
+
 			webView.ScalesPageToFit = true;
 
 
 			if(!Reachability.IsHostReachable("tum.pt")) {
+				Reachability.InternetConnectionStatus (); 
 				UIAlertView alert = new UIAlertView ();
 				alert.Title = "Sem ligação à rede";
 				alert.AddButton ("Continuar");
@@ -41,10 +44,6 @@ namespace FITU_Bracara_Avgvsta
 			{
 				webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 			}
-
-
-
-		
 
 		}
 
@@ -62,6 +61,18 @@ namespace FITU_Bracara_Avgvsta
 		{
 			base.ViewDidLoad ();
 			webView.ShouldStartLoad = HandleShouldStartLoad;
+			Reachability.ReachabilityChanged += (sender, e) => {
+				if (Reachability.InternetConnectionStatus() != NetworkStatus.NotReachable){
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+				}
+				else{
+					UIAlertView alert = new UIAlertView ();
+					alert.Title = "Sem ligação à rede";
+					alert.AddButton ("Continuar");
+					alert.Message = "Não conseguirá usar a aplicação sem conexão à rede.";
+					alert.Show ();
+				} 
+			};
 
 
 			// Perform any additional setup after loading the view, typically from a nib.
@@ -69,7 +80,6 @@ namespace FITU_Bracara_Avgvsta
 
 		public override void ViewWillAppear (bool animated)
 		{
-			webView.Reload ();
 			if (executed == 0) {
 				executed = 1;
 				base.ViewWillAppear (animated);
@@ -120,6 +130,7 @@ namespace FITU_Bracara_Avgvsta
 
 			return true;
 		}
+			
 
 		#endregion
 	}

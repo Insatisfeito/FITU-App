@@ -7,7 +7,9 @@ namespace FITU_Bracara_Avgvsta
 {
 	public partial class Vote : UIViewController
 	{
-		UIWebView webView; int executed = 0;
+		UIWebView webView; int executed = 0; 
+		string url = "http://poll.fitu.tum.pt";
+
 		public Vote (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("Votação", "Votação");
@@ -16,9 +18,10 @@ namespace FITU_Bracara_Avgvsta
 			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
 
 			View.AddSubview(webView);
-			string url = "http://poll.fitu.tum.pt";
+			url = "http://poll.fitu.tum.pt";
 
 			webView.ScalesPageToFit = false;
+
 
 
 
@@ -49,6 +52,11 @@ namespace FITU_Bracara_Avgvsta
 		{
 			base.ViewDidLoad ();
 			webView.ShouldStartLoad = HandleShouldStartLoad;
+			Reachability.ReachabilityChanged += (sender, e) => {
+				if (Reachability.InternetConnectionStatus() != NetworkStatus.NotReachable){
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+				}
+			};
 
 			// Perform any additional setup after loading the view, typically from a nib.
 		}

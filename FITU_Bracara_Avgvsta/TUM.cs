@@ -7,7 +7,7 @@ namespace FITU_Bracara_Avgvsta
 {
 	public partial class TUM : UIViewController
 	{
-		UIWebView webView; int executed = 0;
+		UIWebView webView; int executed = 0;string url = "http://ios.tum.pt/index.html";
 		public TUM (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("TUM", "TUM");
@@ -15,7 +15,7 @@ namespace FITU_Bracara_Avgvsta
 			webView = new UIWebView (View.Bounds);
 			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
 			View.AddSubview(webView);
-			string url = "http://ios.tum.pt/index.html";
+			url = "http://ios.tum.pt/index.html";
 			webView.ScalesPageToFit = true;
 
 
@@ -47,6 +47,11 @@ namespace FITU_Bracara_Avgvsta
 		{
 			base.ViewDidLoad ();
 			webView.ShouldStartLoad = HandleShouldStartLoad;
+			Reachability.ReachabilityChanged += (sender, e) => {
+				if (Reachability.InternetConnectionStatus() != NetworkStatus.NotReachable){
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+				}
+			};
 
 			// Perform any additional setup after loading the view, typically from a nib.
 		}

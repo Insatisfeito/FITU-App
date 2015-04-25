@@ -9,7 +9,11 @@ namespace FITU_Bracara_Avgvsta
 {
 	public partial class FITU : UIViewController
 	{
-		UIWebView webView; int executed = 0;string url;UISegmentedControl segmentControl;
+		UIWebView webView; 
+		int executed = 0;
+		string url = "http://ios.tum.pt/agenda.html";
+		UISegmentedControl segmentControl;
+
 		public FITU (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("XXV FITU", "XXV FITU");
@@ -24,6 +28,7 @@ namespace FITU_Bracara_Avgvsta
 
 	
 			if(!Reachability.IsHostReachable("tum.pt")) {
+				Reachability.InternetConnectionStatus ();
 				UIAlertView alert = new UIAlertView ();
 				alert.Title = "Sem ligação à rede";
 				alert.AddButton ("Continuar");
@@ -89,6 +94,12 @@ namespace FITU_Bracara_Avgvsta
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			webView.ShouldStartLoad = HandleShouldStartLoad;
+			Reachability.ReachabilityChanged += (sender, e) => {
+				if (Reachability.InternetConnectionStatus() != NetworkStatus.NotReachable){
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+				}
+			};
 
 
 
