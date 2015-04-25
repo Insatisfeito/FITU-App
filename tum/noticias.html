@@ -12,15 +12,36 @@
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        $.getJSON("http://www.tum.pt/?json=get_recent_posts&callback=?", function(data) {
-            for (var i = 0; i < data.posts.length; i++) {
-                $(".news").append("<h3>" + data.posts[i].title + "</h3>");
+    	var page = 1;
+    	function loadnews(){       
+    		$.getJSON("http://www.tum.pt/?json=get_recent_posts&callback=?&count=6&page="+page, function loadnews(data) {
+            	for (var i = 0; i < data.posts.length; i++) {
+              	  $(".news").append("<h3>" + data.posts[i].title + "</h3>");
 
-                $(".news").append(data.posts[i].content);
-                $(".news").append(data.posts[i].date);
-                $(".news").append("<hr>");
-            }
-        });
+					var date = new Date(data.posts[i].date);
+               	 $(".news").append(data.posts[i].content);
+               	 $(".news").append(date.getDate() +"-"+ (date.getMonth()+1)+"-"+ date.getFullYear());
+               	 $(".news").append("<hr>");
+           	 }
+           	 
+           	 if(data.pages <= 1 || data.pages <= page){
+           	 	$("#view_more").hide();
+           	 }
+           	 else{
+           	 	$("#view_more").show();
+           	 }
+           	 
+        	});	
+        };
+        
+        loadnews();
+        
+        
+        $( "#view_more" ).click(function() {
+        	page += 1;
+        	loadnews();
+		});
+        
     });
     </script>
     <link rel="stylesheet" href="css/normalize.css">
@@ -32,8 +53,11 @@
         color: #FFF;
         margin-top: 20px;
         margin-bottom: 20px;
-        margin-left: -30px;
+        width:100%;
     }
+    
+    container{
+    margin-left: 0px;}
 
     body {
         background-image: url(images/bg.jpg);
@@ -41,7 +65,13 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    </style>
+    #view_more{
+    	width: 100%;
+    	margin:auto;
+    	display: none;
+    }   
+    
+</style>
 </head>
 
 <body>
@@ -51,7 +81,9 @@
                 <h4>Notícias</h4>
                 <div class="news"></div>
             </div>
+            
         </div>
+        <button id="view_more">Mais...</button>
     </div>
 </body>
 

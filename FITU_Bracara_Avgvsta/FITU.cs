@@ -9,20 +9,19 @@ namespace FITU_Bracara_Avgvsta
 {
 	public partial class FITU : UIViewController
 	{
-		UIWebView webView; int executed = 0;
+		UIWebView webView; int executed = 0;string url;UISegmentedControl segmentControl;
 		public FITU (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("XXV FITU", "XXV FITU");
 	
 			View.BackgroundColor = UIColor.White;
+
+
 			webView = new UIWebView (View.Bounds);
 			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
 			View.AddSubview(webView);
-			string url = "http://ios.tum.pt/agenda.html";
 			webView.ScalesPageToFit = true;
-
-
-
+	
 			if(!Reachability.IsHostReachable("tum.pt")) {
 				UIAlertView alert = new UIAlertView ();
 				alert.Title = "Sem ligação à rede";
@@ -32,8 +31,43 @@ namespace FITU_Bracara_Avgvsta
 			}
 			else
 			{
+				url = "http://ios.tum.pt/agenda.html";
 				webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 			}
+
+
+			segmentControl = new UISegmentedControl();
+			segmentControl.Frame = new RectangleF(20,20,280,40);
+			segmentControl.InsertSegment("Programa", 0, false);
+			segmentControl.InsertSegment("Tunas", 1, false);
+			segmentControl.InsertSegment("Historial", 2, false);
+			segmentControl.SelectedSegment = 1;
+			View.AddSubview (segmentControl);
+			segmentControl.TintColor = UIColor.Red; 
+			segmentControl.ControlStyle = UISegmentedControlStyle.Bordered;
+
+			segmentControl.ValueChanged += (sender, e) => {
+				var selectedSegmentId = (sender as UISegmentedControl).SelectedSegment;
+				switch (selectedSegmentId) {
+				case 0:
+					url = "http://ios.tum.pt/agenda.html";
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+					break; 
+				case 1:
+					url = "http://ios.tum.pt/agenda.html";
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+					break; 
+				case 2:
+					url = "http://ios.tum.pt/agenda.html";
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+					break;
+				default:
+					url = "http://ios.tum.pt/agenda.html";
+					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+					break;
+				}
+			};
+		
 		}
 
 		
@@ -48,11 +82,14 @@ namespace FITU_Bracara_Avgvsta
 
 		#region View lifecycle
 
+
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 
-			webView.ShouldStartLoad = HandleShouldStartLoad;
+
+
 		
 		}
 
