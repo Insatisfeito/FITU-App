@@ -44,7 +44,7 @@ namespace FITU_Bracara_Avgvsta
 
 
 			segmentControl = new UISegmentedControl();
-			segmentControl.Frame = new RectangleF(0,0,320,40);
+			segmentControl.Frame = new RectangleF(20,20,280,40);
 			segmentControl.BackgroundColor = UIColor.White;
 			segmentControl.InsertSegment("Programa", 0, false);
 			segmentControl.InsertSegment("Tunas", 1, false);
