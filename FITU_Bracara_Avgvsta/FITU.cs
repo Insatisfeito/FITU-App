@@ -1,6 +1,5 @@
 using System;
 using System.Drawing;
-
 using Foundation;
 using UIKit;
 using CoreGraphics;
@@ -40,6 +39,8 @@ namespace FITU_Bracara_Avgvsta
 				url = "http://ios.tum.pt/agenda.html";
 				webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 			}
+
+
 
 
 			segmentControl = new UISegmentedControl();

@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using UIKit;
 using CoreGraphics;
+using System.Drawing;
 
 namespace FITU_Bracara_Avgvsta
 {
@@ -15,12 +16,14 @@ namespace FITU_Bracara_Avgvsta
 			Title = NSBundle.MainBundle.LocalizedString ("Votação", "Votação");
 			View.BackgroundColor = UIColor.White;
 			webView = new UIWebView (View.Bounds);
-			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
+			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,65,0);
 
 			View.AddSubview(webView);
 			url = "http://poll.fitu.tum.pt";
 
 			webView.ScalesPageToFit = false;
+
+
 
 
 
