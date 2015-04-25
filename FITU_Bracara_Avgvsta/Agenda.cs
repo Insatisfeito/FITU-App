@@ -63,11 +63,13 @@ namespace FITU_Bracara_Avgvsta
 			base.ViewDidLoad ();
 			webView.ShouldStartLoad = HandleShouldStartLoad;
 
+
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
 		public override void ViewWillAppear (bool animated)
 		{
+			webView.Reload ();
 			if (executed == 0) {
 				executed = 1;
 				base.ViewWillAppear (animated);
@@ -91,6 +93,7 @@ namespace FITU_Bracara_Avgvsta
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
+
 		}
 
 		public override void ViewWillDisappear (bool animated)

@@ -19,8 +19,7 @@ namespace FITU_Bracara_Avgvsta
 			TabBar.Items[0].Image = UIImage.FromFile ("agenda").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 			TabBar.Items[1].Image = UIImage.FromFile ("tum").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 			TabBar.Items[2].Image = UIImage.FromFile ("fitu").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-			TabBar.Items[3].Image = UIImage.FromFile ("historial").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-			TabBar.Items[4].Image = UIImage.FromFile ("vote").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+			TabBar.Items[3].Image = UIImage.FromFile ("vote").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 
 
 		}

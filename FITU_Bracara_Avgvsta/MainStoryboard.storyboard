@@ -19,7 +19,6 @@
                         <segue id="68" destination="28" kind="relationship" relationship="viewControllers"/>
                         <segue id="89" destination="35" kind="relationship" relationship="viewControllers"/>
                         <segue id="113" destination="42" kind="relationship" relationship="viewControllers"/>
-                        <segue id="340" destination="318" kind="relationship" relationship="viewControllers"/>
                         <segue id="360" destination="345" kind="relationship" relationship="viewControllers"/>
                     </connections>
                 </tabBarController>
@@ -87,25 +86,6 @@
             </objects>
             <point key="canvasLocation" x="200" y="492"/>
         </scene>
-        <scene sceneID="317">
-            <objects>
-                <viewController id="318" sceneMemberID="viewController" customClass="Historial">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="315"/>
-                        <viewControllerLayoutGuide type="bottom" id="316"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="319">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Historial" id="339" image="historial.png"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="320" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-205" y="834"/>
-        </scene>
         <scene sceneID="344">
             <objects>
                 <viewController id="345" sceneMemberID="viewController" customClass="Vote">
@@ -142,5 +122,8 @@
         <image name="historial.png" width="30" height="30"/>
         <image name="Default.png" width="320" height="480"/>
         <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="Content/images/2208.png" width="1242" height="906"/>
+        <image name="Content/images/bg.jpg" width="200" height="230"/>
+        <image name="Content/images/tum_logo.png" width="727" height="727"/>
     </resources>
 </document>

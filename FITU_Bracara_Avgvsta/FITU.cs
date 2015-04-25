@@ -21,6 +21,7 @@ namespace FITU_Bracara_Avgvsta
 			webView.ScrollView.ContentInset = new UIEdgeInsets(0,0,45,0);
 			View.AddSubview(webView);
 			webView.ScalesPageToFit = true;
+
 	
 			if(!Reachability.IsHostReachable("tum.pt")) {
 				UIAlertView alert = new UIAlertView ();
@@ -37,14 +38,15 @@ namespace FITU_Bracara_Avgvsta
 
 
 			segmentControl = new UISegmentedControl();
-			segmentControl.Frame = new RectangleF(20,20,280,40);
+			segmentControl.Frame = new RectangleF(0,0,320,40);
+			segmentControl.BackgroundColor = UIColor.White;
 			segmentControl.InsertSegment("Programa", 0, false);
 			segmentControl.InsertSegment("Tunas", 1, false);
 			segmentControl.InsertSegment("Historial", 2, false);
-			segmentControl.SelectedSegment = 1;
+			segmentControl.SelectedSegment = 0;
 			View.AddSubview (segmentControl);
 			segmentControl.TintColor = UIColor.Red; 
-			segmentControl.ControlStyle = UISegmentedControlStyle.Bordered;
+			segmentControl.ControlStyle = UISegmentedControlStyle.Bar;
 
 			segmentControl.ValueChanged += (sender, e) => {
 				var selectedSegmentId = (sender as UISegmentedControl).SelectedSegment;
@@ -54,11 +56,11 @@ namespace FITU_Bracara_Avgvsta
 					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 					break; 
 				case 1:
-					url = "http://ios.tum.pt/agenda.html";
+					url = "http://ios.tum.pt/tunas.html";
 					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 					break; 
 				case 2:
-					url = "http://ios.tum.pt/agenda.html";
+					url = "http://ios.tum.pt/historial.html";
 					webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 					break;
 				default:
