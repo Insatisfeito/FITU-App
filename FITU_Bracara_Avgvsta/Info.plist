@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleIdentifier</key>
-	<string>com.your-company.FITU_Bracara_Avgvsta</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -32,8 +30,6 @@
 	<string>MainStoryboard</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Images.xcassets/LaunchImage-1.launchimage</string>
-	<key>CFBundleDisplayName</key>
-	<string>XXV FITU</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackTranslucent</string>
 	<key>UIStatusBarTintParameters</key>
@@ -55,5 +51,9 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>CFBundleDisplayName</key>
+	<string>TUM</string>
+	<key>CFBundleIdentifier</key>
+	<string>pt.waveform.tum</string>
 </dict>
 </plist>

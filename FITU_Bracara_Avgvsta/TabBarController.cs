@@ -14,14 +14,12 @@ namespace FITU_Bracara_Avgvsta
 			TabBar.TintColor = UIColor.White;
 			TabBar.Translucent = false;
 
-
-
 			TabBar.Items[0].Image = UIImage.FromFile ("agenda").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 			TabBar.Items[1].Image = UIImage.FromFile ("tum").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 			TabBar.Items[2].Image = UIImage.FromFile ("fitu").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 			TabBar.Items[3].Image = UIImage.FromFile ("vote").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 
-
+			UITabBarItem.Appearance.SetTitleTextAttributes (new UITextAttributes{ TextColor = UIColor.White }, UIControlState.Selected);
 		}
 
 		public override void DidReceiveMemoryWarning ()
